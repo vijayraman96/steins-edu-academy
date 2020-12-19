@@ -1,0 +1,231 @@
+.destination-para {
+    padding: 100px 0px;
+}
+.banner-para-container {
+    text-align: center;
+}
+.banner-para-title {
+    margin: 1rem 0rem;
+}
+.banner-para-text p {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    color: #303030;
+}
+/*------------Our Destination Para Ends -------------*/
+/*------------Our Destination Countries Starts -------------*/
+.destination-country {
+    padding: 100px 0px 0px 0px;
+}
+.desti {
+    overflow: hidden;
+}
+.box {
+    width: 100% ;
+    height: 550px;
+    overflow: visible;
+    position: relative;
+}
+.box .inner-box {
+    max-width: 350px;
+    width: 100%;
+    height: 500px;
+    margin: 0px auto;
+}
+.box .inner-box .card {
+    /* border-radius: 40px !important; */
+    clip-path: ellipse(90% 100% at center top);
+    height: 100%;
+    background-color: rgb(245, 244, 244);
+    border-radius: 40px 40px 0px 0px;
+    overflow: visible;
+    /* box-shadow: -15px 5px 20px #ced0d3; */
+}
+.box .inner-box .card .image-container {
+}
+.box .inner-box .card .image-container img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 40px 40px 0px 0px;
+}
+.box .inner-box .card .title {
+    height: auto;
+}
+.box .inner-box .card .para {
+    height: 100px;
+    text-align: center;
+}
+.box .inner-box .card .title h3{
+    padding: 0.6rem 0rem;
+    text-align: center;
+    color: #11426a;
+}
+.box .inner-box .card .para p {
+    margin: 5px 25px 25px 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    /* color: #11426a; */
+    color: #00afef;
+}
+.box .inner-box .flag-background {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 140px;
+    background-color: #fff;
+    z-index: 10;
+}
+.box .inner-box .flag-background .flag {
+    z-index: 10;
+    padding: 10px;
+}
+.box .inner-box .flag-background .flag img{
+    z-index: 10;
+}
+.box .inner-box.card .button-container {
+    margin-bottom: 80px;
+}
+.box .inner-box .card .button-container a.main-btn {
+    height: 40px;
+    background-color: #11426a;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.box .inner-box .card .button-container a.main-btn .bg {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    width: 128px;
+    height: 32px;
+    left: 4px;
+    top: 4px;
+    border: 1px solid #fff;
+}
+.owl-nav {
+    width: 100%;
+    margin: 0 auto;
+}
+.owl-carousel .owl-nav {
+    display: inline-block;
+    text-align: center;
+    
+}
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    width: 50px;
+}
+.gallery-title-container {
+    padding: 20px 0px;
+    text-align: center;
+}
+/*-------about country--------*/
+.about-country {
+    padding: 80px 0px;
+    text-align: center;
+}
+.about-country .country-title {
+    padding: 10px 0px;
+}
+.about-country .country-title h2 {
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 54px;
+    color: #11426a;
+}
+.about-country .country-para p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #11426a;
+    margin-top: 25px;
+}
+.country-university-title {
+    padding: 10px 0px;
+}
+.university-mission-container .sub-title:before, .university-vision-container .sub-title:before{
+    display: none;
+}
+/*------------Our Destination Countries Ends -------------*/
+/*-----services we provide starts here------*/
+.services-we-provide {
+    padding: 50px 0px;
+}
+.services-we-provide .services-we-provide-title-container {
+    display: flex;
+    margin: 15px 0px;
+    align-items: center;
+}
+.services-we-provide .services-we-provide-title-container .service-icon {
+    width: 60px;
+    margin-right: 15px;
+}
+.services-we-provide .services-we-provide-text-container p{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #11426a;
+        margin-top: 25px;
+    
+}
+.services-we-provide .services-we-provide-button-container .main-btn {
+    height: 40px;
+    line-height: 40px;
+}
+.event-features {
+    text-align: left;
+}
+.event-sidebar ul li a {
+    border-bottom: 1px solid transparent !important;
+}
+/*-----services we provide ends here--------*/ 
+@media(min-width: 997px) and (max-width: 1200px) {
+    .box {
+        margin: 0px;
+    }
+    .box .inner-box {
+        max-width: 320px;
+        width: 100%;
+        height: 500px;
+        margin: 0px auto;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 996px) {
+    .box {
+        margin: 0px;
+    }
+    .box .inner-box {
+        max-width: 320px;
+        width: 100%;
+        height: 500px;
+        margin: 0px auto;
+    }
+}
+@media(max-width: 576px) {
+    .box {
+        width: 100% ;
+        height: 550px;
+        max-width: 360px !important;
+        overflow: visible;
+        position: relative;
+        /* height: 350px; */
+        padding: 0px 20px;
+        margin: 0px;
+    }
+    .box .inner-box .flag-background {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 10px;
+        left: 120px;
+        background-color: #fff;
+        z-index: 10;
+    }
+}
