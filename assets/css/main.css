@@ -230,5 +230,6 @@
     }
     .box .inner-box .card .button-container a.main-btn .bg  {
         width: 100px;
+        padding: 1px;
     }
 }
