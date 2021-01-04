@@ -183,6 +183,59 @@
 .event-sidebar ul li a {
     border-bottom: 1px solid transparent !important;
 }
+/*---------tab-container----------*/
+.tab-title {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 34px;
+    color: #11426a;
+    font-family: Exo;
+    margin-bottom: 5px;
+}
+.tab-para {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #11426a;
+   margin: 10px 0px 15px 0px;
+}
+.tab-image-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.tab-image-container .tab-image {
+    max-width: auto;
+    height: 200px;
+    width: 100%;
+    /* height: 100%; */
+   
+}
+.tab-image-container .tab-image img{
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+.tab-image-container .tab-text-container {
+    width: auto;
+}
+.tab-ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #11426a;
+    font-size: 18px;
+    line-height: 30px;
+}
+.table-bordered thead th {
+    color: #00afef;
+}
+.table-bordered thead td {
+    color: #11426a;
+}
+.table-bordered tbody td {
+    color: #11426a;
+}
 /*-----services we provide ends here--------*/ 
 @media(min-width: 997px) and (max-width: 1200px) {
     .box {
@@ -231,5 +284,8 @@
     .box .inner-box .card .button-container a.main-btn .bg  {
         width: 100px;
         padding: 1px;
+    }
+    table {
+        margin: 0px 10px;
     }
 }
