@@ -1428,9 +1428,9 @@ transition: all 0.3s linear;
   -ms-flex-pack: space-around;
   justify-content: space-around; }
   .features-items .features-items-wrapper .single-features-item {
-    max-width: 245px;
-    padding: 50px 0;
-    height: 220px;
+    max-width: 200px;
+    padding: 20px 0;
+    height: 180px;
     width: 100%; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .features-items .features-items-wrapper .single-features-item {
@@ -1454,8 +1454,13 @@ transition: all 0.3s linear;
       @media only screen and (min-width: 576px) and (max-width: 767px) {
         .features-items .features-items-wrapper .single-features-item .item-content {
           padding-left: 15px; } }
-      .features-items .features-items-wrapper .single-features-item .item-content p {
+      .features-items .features-items-wrapper .single-features-item .item-content a p {
         color:#11426a;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px; }
+      .features-items .features-items-wrapper .single-features-item .item-content a:hover p {
+        color:#00afef;
         font-weight: 600;
         font-size: 24px;
         line-height: 32px; }
