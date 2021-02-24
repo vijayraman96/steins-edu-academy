@@ -236,6 +236,10 @@
 .table-bordered tbody td {
     color: #11426a;
 }
+/*---------uv gullas.html page--------------*/
+.event-title-2 {
+    margin: 0px 0px 20px 0px;
+}
 /*-----services we provide ends here--------*/ 
 @media(min-width: 997px) and (max-width: 1200px) {
     .box {

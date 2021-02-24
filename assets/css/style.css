@@ -740,7 +740,8 @@ transition: all 0.3s linear;
   font-family: Exo;
   font-weight: 400;
   font-size: 13px;
-  color: #8D8D8D;
+  /* color: #8D8D8D; */
+  color: #fff;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
@@ -876,7 +877,7 @@ transition: all 0.3s linear;
         color: #00afef; }
       .navigation .nav-menus-wrapper .nav-menu li .nav-submenu {
         position: absolute;
-        width: 215px;
+        width: 230px;
         background-color: #fff;
         border-top: 2px solid #07294D;
         padding: 10px 0px;
@@ -994,6 +995,7 @@ transition: all 0.3s linear;
       -ms-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
+
   .navigation .nav-toggle {
     width: 30px;
     height: 30px;
@@ -1001,7 +1003,7 @@ transition: all 0.3s linear;
     position: absolute;
     top: 50%;
     margin-top: -14px;
-    right: 15px;
+    right: -15px;
     cursor: pointer; }
     .navigation .nav-toggle::before {
       content: "";
@@ -3036,6 +3038,7 @@ object-fit: cover;}
       font-weight: 600;
       font-size: 24px;
       letter-spacing: 0.02em;
+      margin: 0px 0px 20px 0px;
       line-height: 30px;
       color:#11426a;
       -webkit-transition: all 0.3s linear;
@@ -6786,4 +6789,42 @@ background-color: transparent;
 }
 .blog-1 {
   padding: 5px 15px 15px 15px !important
+}
+
+@media(max-width: 600px) {
+  .header-top-wrapper .header-top-right .header-link a + a {
+    margin-left: 20px;
+  }
+  .header-top-wrapper .header-top-right .header-link a.register::before {
+    left: -11px;
+  }
+  .navigation .nav-toggle {
+    margin-right: 25px;
+  }
+  .about-image .single-image::before {
+    /* display: none; */
+  }
+  .about-image .image-1::before {
+    width: 240px;
+    height: 240px;
+    right: 60px !important;
+    top:-20px !important;
+  }
+  .about-image .image-2 {
+    top: 10px !important;
+    left: 60px !important;
+  }
+  .about-image .image-2::before {
+    width: 210px;
+    height: 210px;
+    right: 90px !important;
+    top:-20px !important;
+  }
+  .features-items .features-items-wrapper .single-features-item .item-content a p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .about-content p {
+    margin-top: 15px;
+  }
 }
