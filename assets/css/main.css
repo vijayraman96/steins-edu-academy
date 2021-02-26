@@ -153,6 +153,15 @@
 }
 /*------------Our Destination Countries Ends -------------*/
 /*-----services we provide starts here------*/
+.service-provide-container {
+
+}
+.service-image-container {
+    width: 100%;
+}
+.service-image-container img {
+    width:100%;
+}
 .services-we-provide {
     padding: 50px 0px;
 }
@@ -171,7 +180,7 @@
         line-height: 30px;
         color: #11426a;
         margin-top: 25px;
-    
+        height: 170px;
 }
 .services-we-provide .services-we-provide-button-container .main-btn {
     height: 40px;
@@ -241,6 +250,44 @@
     margin: 0px 0px 20px 0px;
 }
 /*-----services we provide ends here--------*/ 
+
+
+/*--------test preparation-------*/
+.test-preparation-container {
+    display: flex;
+    justify-content: center;
+}
+.test-preparation-container .test-prep-left-block {
+    max-width: 400px;
+    margin: 0px 80px
+}
+.test-preparation-container .test-prep-right-block {
+    max-width: 400px;
+    margin: 0px 80px
+}
+.test-preparation-container .test-prep-left-block .test-prep-li-block{
+    display: flex;
+    align-items: center;
+}
+.test-preparation-container .test-prep-right-block .test-prep-li-block{
+    display: flex;
+    align-items: center;
+}
+.test-preparation-container .test-prep-left-block .test-prep-li-block img{
+    width: 70px;
+}
+.test-preparation-container .test-prep-left-block .test-prep-li-block h6 {
+    padding-left: 20px;
+    text-align: left;
+}
+.test-preparation-container .test-prep-right-block .test-prep-li-block h6 {
+    padding-left: 20px;
+    text-align: left;
+}
+.test-preparation-container .test-prep-right-block .test-prep-li-block img{
+    width: 70px;
+}
+/*--------test preparation-------*/
 @media(min-width: 997px) and (max-width: 1200px) {
     .box {
         margin: 0px;
@@ -291,5 +338,19 @@
     }
     table {
         margin: 0px 10px;
+    }
+    .test-preparation-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .test-preparation-container .test-prep-left-block,.test-preparation-container .test-prep-right-block {
+        margin: 0px;
+    }
+    .service-provide-container {
+        margin: 20px 0px;
+    }
+    .about-country .country-title h2  {
+        font-size: 30px;
     }
 }
