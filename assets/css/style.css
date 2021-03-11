@@ -1498,19 +1498,19 @@ transition: all 0.3s linear;
   .courses-wrapper.wrapper-2 {
     padding-top: 10px; }
   .courses-wrapper .courses-col:nth-child(8n+1) .single-courses-2, .courses-wrapper .courses-col:nth-child(8n+1) .single-courses {
-    background-color:#11426a; }
+    background-color:#fff; }
     .courses-wrapper .courses-col:nth-child(8n+1) .single-courses-2 .courses-content .duration-rating, .courses-wrapper .courses-col:nth-child(8n+1) .single-courses .courses-content .duration-rating {
-      background-color:#11426a; }
+      background-color:#fff; }
   .courses-wrapper .courses-col:nth-child(8n+2) .single-courses-2, .courses-wrapper .courses-col:nth-child(8n+2) .single-courses {
-    background-color: #00afef; }
+    background-color: #fff; }
     .courses-wrapper .courses-col:nth-child(8n+2) .single-courses-2 .courses-content .duration-rating, .courses-wrapper .courses-col:nth-child(8n+2) .single-courses .courses-content .duration-rating {
-      background-color: #00afef; }
+      background-color: #fff; }
   .courses-wrapper .courses-col:nth-child(8n+3) .single-courses-2, .courses-wrapper .courses-col:nth-child(8n+3) .single-courses {
-    background-color: #2F7AD5; }
+    background-color: #fff; }
     .courses-wrapper .courses-col:nth-child(8n+3) .single-courses-2 .courses-content .duration-rating, .courses-wrapper .courses-col:nth-child(8n+3) .single-courses .courses-content .duration-rating {
-      background-color: #2F7AD5; }
+      background-color: #fff; }
   .courses-wrapper .courses-col:nth-child(8n+4) .single-courses-2, .courses-wrapper .courses-col:nth-child(8n+4) .single-courses {
-    background-color: #27B8A7; }
+    background-color: #fff; }
     .courses-wrapper .courses-col:nth-child(8n+4) .single-courses-2 .courses-content .duration-rating, .courses-wrapper .courses-col:nth-child(8n+4) .single-courses .courses-content .duration-rating {
       background-color: #27B8A7; }
   .courses-wrapper .courses-col:nth-child(8n+5) .single-courses-2, .courses-wrapper .courses-col:nth-child(8n+5) .single-courses {
@@ -1685,17 +1685,22 @@ transition: all 0.3s linear;
 
 /*===== Courses 2 =====*/
 .single-courses-2 .courses-image {
+  width: 100%;
+  text-align: center;
   overflow: hidden; }
   .single-courses-2 .courses-image a {
     display: block; }
   .single-courses-2 .courses-image img {
-    width: 100%;
+    margin: 15px;
+    width: 90%;
+    height: 160px;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear; }
 .single-courses-2 .courses-content {
+  background-color: #11426a;
   padding: 25px 25px;
   position: relative; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1910,10 +1915,10 @@ transition: all 0.3s linear;
   transform: scale(1.1); }
 .single-courses-2:hover .courses-content .duration-rating {
   opacity: 1;
-  visibility: visible; }
+  visibility: hidden; }
 .single-courses-2:hover .courses-link {
   opacity: 1;
-  visibility: hidden; }
+  visibility: visible; }
 
 .courses-menu .menu-items li {
   display: inline-block;
