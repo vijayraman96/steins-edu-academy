@@ -1694,6 +1694,7 @@ transition: all 0.3s linear;
     margin: 15px;
     width: 90%;
     height: 160px;
+    object-fit: contain;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
     -ms-transition: all 0.3s linear;
