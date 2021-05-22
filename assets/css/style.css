@@ -22,9 +22,10 @@
 /*===========================
     1. COMMON css 
 ===========================*/
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swa");
 body {
-  font-family: "Exo", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #151515; }
@@ -69,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Exo", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   color:#11426a;
   margin: 0px; }
@@ -718,7 +719,7 @@ transition: all 0.3s linear;
   .header-top-wrapper .header-top-left {
     width: auto; } }
 .header-top-wrapper .header-top-left .header-meta li a {
-  font-family: Exo;
+  font-family: 'Source Sans Pro';
   font-weight: 400;
   font-size: 13px;
   color: #fff;
@@ -737,7 +738,7 @@ transition: all 0.3s linear;
   .header-top-wrapper .header-top-right {
     width: auto; } }
 .header-top-wrapper .header-top-right .header-link a {
-  font-family: Exo;
+  font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 13px;
   /* color: #8D8D8D; */
@@ -1185,7 +1186,7 @@ transition: all 0.3s linear;
       height: auto; } }
 
 .slider-content {
-  max-width: 590px;
+  max-width: 750px;
 }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .slider-content {
@@ -1545,7 +1546,7 @@ transition: all 0.3s linear;
     line-height: 32px;
     color: #fff; }
   .single-courses .courses-title a {
-    font-family: Exo;
+    font-family: "Source Sans Pro";
     font-weight: 500;
     font-size: 22px;
     line-height: 32px;
@@ -1717,7 +1718,7 @@ transition: all 0.3s linear;
     line-height: 32px;
     color: #fff; }
   .single-courses-2 .courses-content .courses-title a {
-    font-family: Exo;
+    font-family: "Source Sans Pro";
     font-weight: 500;
     font-size: 22px;
     line-height: 32px;
@@ -5338,7 +5339,7 @@ background-color: transparent;
         21.Gallery css 
 ===========================*/
 .gallery-page {
-  padding-top: 50px; }
+  padding-top: 20px; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .gallery-page {
       padding-top: 70px; } }
@@ -6834,4 +6835,45 @@ background-color: transparent;
   .about-content p {
     margin-top: 15px;
   }
+  .university-facilities .col-md-3 {
+    padding: 20px 10px;
+  }
+}
+
+.blog-area .slick-track {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-around;
+}
+.blog-area .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-area .blog-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-area .single-blog {
+  max-width: 450px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-area .blog-col-bor {
+  border-right: 1px solid #11426a;
+}
+/*********************university-facilities***********/
+.university-facilities {
+  padding: 70px 0px 40px 0px;
+}
+.university-facilities .facility-block {
+  text-align: center;
+}
+.university-facilities .facility-block .image-block img {
+  width: 80px; 
+  height:auto;
 }
