@@ -4078,7 +4078,21 @@ background-color: transparent;
     @media (max-width: 767px) {
       .footer-widget .footer-title {
         font-size: 20px; } }
-
+.footer-link .footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+.footer-link .footer-icons img {
+  width: 25px;
+  height: auto;
+}
+.footer-link .footer-icons img.icon1 {
+  width: 40px;
+  height: auto;
+}
 .footer-link .link-list {
   padding-top: 10px; }
   .footer-link .link-list li {
@@ -6602,7 +6616,7 @@ background-color: transparent;
           color: #303030; }
     .faq-wrapper .accordion .card .card-body {
       padding: 0;
-      padding-left: 35px;
+      padding-left: 0px;
       position: relative;
       margin-top: 30px; }
       .faq-wrapper .accordion .card .card-body .answer {
