@@ -24,8 +24,9 @@
 ===========================*/
 /* @import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swa");
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500&display=swap");
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Gelasio', serif;
   font-weight: normal;
   font-style: normal;
   color: #151515; }
@@ -70,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Gelasio', serif;
   font-weight: 700;
   color:#11426a;
   margin: 0px; }
@@ -678,9 +679,9 @@ transition: all 0.3s linear;
   height: auto
 }
 .logo-text{
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 28px;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
   text-align: center;
   color: #11426a;
   padding-left: 4px;
@@ -721,7 +722,7 @@ transition: all 0.3s linear;
 .header-top-wrapper .header-top-left .header-meta li a {
   font-family: 'Source Sans Pro';
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
   color: #fff;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -740,7 +741,7 @@ transition: all 0.3s linear;
 .header-top-wrapper .header-top-right .header-link a {
   font-family: "Source Sans Pro";
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
   /* color: #8D8D8D; */
   color: #fff;
   -webkit-transition: all 0.3s linear;
@@ -1308,7 +1309,7 @@ transition: all 0.3s linear;
     display: contents; }
 
 .features-image {
-  margin-top: 50px; }
+  margin-top: 100px; }
 
 .features-mask {
   max-width: 346px;
@@ -3701,7 +3702,7 @@ object-fit: cover;}
       11.Blog css 
 ===========================*/
 .blog-area {
-  padding-top: 150px; }
+  padding-top: 50px; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .blog-area {
       padding-top: 90px; } }
@@ -3953,7 +3954,7 @@ object-fit: cover;}
       12.Newsletter css 
 ===========================*/
 .newsletter-area {
-  padding-top: 160px;
+  padding-top: 50px;
   position: relative;
   z-index: 8;
   margin-bottom: -150px; }
@@ -4057,8 +4058,8 @@ background-color: transparent;
     padding-top: 100px; }
 
 .footer-widget {
-  padding-top: 110px;
-  padding-bottom: 150px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-widget {
       padding-bottom: 95px;
@@ -6852,6 +6853,9 @@ background-color: transparent;
   .university-facilities .col-md-3 {
     padding: 20px 10px;
   }
+  .footer-pad {
+    padding-left: 0px !important;
+  }
 }
 
 .blog-area .slick-track {
@@ -6866,16 +6870,38 @@ background-color: transparent;
   flex-direction: column;
 }
 .blog-area .blog-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-top: 25px;
 }
 .blog-area .single-blog {
-  max-width: 450px !important;
+  max-width: 700px !important;
+  height: 450px ;
+  object-fit: contain;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+.blog-area .single-blog-social {
+  width: 300px; 
+  height: 180px;
+}
+.blog-area .single-blog-social .blog-social{
+  max-width: 100% !important;
+  height: 100% ;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.blog-area .single-blog-social .blog-social a {
+  overflow: hidden;
+}
+.blog-area .single-blog-social .blog-social a img {
+  object-fit: cover;
+  width: auto !important;
+  height: auto; ;
+  overflow: hidden;
 }
 .blog-area .blog-col-bor {
   border-right: 1px solid #11426a;
@@ -6891,3 +6917,99 @@ background-color: transparent;
   width: 80px; 
   height:auto;
 }
+/**********footer************/
+.footer-pad {
+  padding-left: 40px;
+}
+/**********footer************/
+#carouselExampleIndicators .carousel-control-next, #carouselExampleIndicatorsOne .carousel-control-next{
+  left: 330px !important;
+  z-index: 10
+}
+#carouselExampleIndicators .carousel-control-prev, #carouselExampleIndicatorsOne .carousel-control-prev{
+  left: -20px !important;
+  z-index: 10
+}
+.carousel-control-next-icon {
+  background-image: url('../images/icon/right.svg');
+}
+.carousel-control-prev-icon {
+  background-image: url('../images/icon/left.svg');
+  /* left: -50px !important; */
+
+}
+#carouselExampleIndicators .carousel-inner .carousel-item {
+  text-align: center;
+}
+#carouselExampleIndicators .carousel-inner .carousel-item .single-blog-social,
+#carouselExampleIndicatorsOne .carousel-inner .carousel-item .single-blog-social {
+  margin: 0px auto;
+}
+.twitter {
+  padding-top: 30px;
+}
+.nav-toggle {
+  display: none;
+}
+#carouselExampleIndicatorsTwo .carousel-control-prev {
+  left: -90px !important;
+}
+#carouselExampleIndicatorsTwo .carousel-control-next {
+  right: -30px !important;
+}
+.logo-carousel .owl-nav {
+  display: none;
+}
+@media(max-width: 1000px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/****courses-wraper starts here*******/
+.courses-wraper .course-card .course-demo-image {
+  overflow: hidden;
+  object-fit: cover;
+}
+.courses-wraper .course-card .course-demo-image a:hover{
+  transform: scale(1.2);
+}
+.courses-wraper .course-card .course-demo-image a {
+  width: 100%;
+  transition: transform 0.3s linear
+}
+.courses-wraper .course-card .course-demo-image a img {
+  width: 100%;
+}
+.courses-wraper .course-card .demo-course-content {
+  background-color: #11426a;
+}
+.courses-wraper .course-card .demo-course-content .branch-name a p {
+  color: #fff;
+  font-size: 14px;
+}
+.courses-wraper .course-card .demo-course-content .college-name p {
+  color: #fff;
+  border-bottom: 1px solid #fff; 
+  font-size: 22px
+}
+
+.courses-wraper .course-card .demo-course-content .apply {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.courses-wraper .course-card .demo-course-content .apply .online a p{
+  color: #fff;
+  font-size: 14px;
+}
+.courses-wraper .course-card .demo-course-content .apply .read-more a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.courses-wraper .course-card .demo-course-content .apply .read-more a p , .courses-wraper .course-card .demo-course-content .apply .read-more a i{
+  color: #fff;
+  font-size: 14px;
+}
+/****courses-wraper ends here here*******/

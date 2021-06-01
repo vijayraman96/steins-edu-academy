@@ -617,14 +617,13 @@ $(function() {
     });
 
     /*=====  End of Back to top ======*/    
-    
     $(document).ready(function() {
 
-         $('.owl-carousel').owlCarousel({
+         $('#countries').owlCarousel({
             loop: true,
             margin: 10,
-            nav: true,
-            dots: true,
+            nav: false,
+            dots: false,
             responsive:{
                 0:{
                     items:1,
@@ -639,6 +638,28 @@ $(function() {
                     nav: true
                 }
             }
+        });
+         $('.logo-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: false,
+            responsive:{
+                0:{
+                    items:1,
+                    nav: true
+                },
+                600:{
+                    items:3,
+                    nav: true
+                },
+                1000:{
+                    items:5,
+                    nav: true
+                }
+            },
+            autoplay:true,
+            autoplayTimeout:1500,
+            autoplayHoverPause:true
         });
     })
 })
