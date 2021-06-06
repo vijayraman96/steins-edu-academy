@@ -25,8 +25,9 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swa");
 @import url("https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 body {
-  font-family: 'Gelasio', serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #151515; }
@@ -7013,3 +7014,96 @@ background-color: transparent;
   font-size: 14px;
 }
 /****courses-wraper ends here here*******/
+/*********events starts here*********/
+.event-box-design {
+
+}
+.event-box-design .card {
+  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.event-box-design .card .image-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.event-box-design .card .image-container::after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(34, 33, 33);
+  opacity: 0.4;
+}
+.event-box-design .card .image-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.event-box-design .card .image-container .btn-container {
+  position: absolute;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.event-box-design .card .image-container .btn-container .btn-one {
+  width: 70px;
+  background-color: rgba(248, 246, 246, 0.94);
+  height: 30px;
+  border-radius: 5px;
+  color: #000;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  z-index: 5;
+}
+.event-box-design .card .image-container .btn-container .btn-two {
+  width: 70px;
+  background-color: rgba(248, 246, 246, 0.94);
+  height: 30px;
+  border-radius: 5px;
+  color: #000;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  justify-content: center;
+  z-index: 5;
+}
+.event-box-design .card .text-container {
+  padding: 20px;
+}
+.event-box-design .card .text-container .text-block-one, .event-box-design .card .text-container .text-block-two {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.event-box-design .card .text-container .text-block-one .month {
+  color: #9D79F7;
+  margin-left: 15px;
+  width: 30px;
+}
+.event-box-design .card .text-container .text-block-one .place {
+  margin-left: 25px
+}
+.event-box-design .card .text-container .text-block-two .date {
+  color: #000;
+  margin-left: 15px;
+  width: 40px;
+}
+.event-box-design .card .text-container .text-block-two .details {
+  margin-left: 25px
+}
+/*********events ends here*********/
