@@ -7021,9 +7021,10 @@ background-color: transparent;
 .event-box-design .card {
   border-radius: 10px;
   background-color: #fff;
-  border-radius: 30px;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
+  box-shadow: 2px 28px 37px -30px rgba(97,76,76,0.73);
 }
 .event-box-design .card .image-container {
   width: 100%;
@@ -7089,7 +7090,24 @@ background-color: transparent;
   width: 100%;
   margin: 5px 0px;
 }
-
+.event-box-design .card .text-container .btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.event-box-design .card .text-container .btn-container .btn-one {
+  margin: 10px 10px 10px 19px;
+  background-color: #07294D;
+  color: #fff;
+  padding: 7px 15px;
+}
+.event-box-design .card .text-container .btn-container .btn-two {
+  margin: 10px 15px 10px 10px;
+  background-color: #1EC1D9;
+  color: #fff;
+  padding: 7px 15px;
+}
 .event-box-design .card .text-container .text-block-one .month {
   color: #9D79F7;
   margin-left: 15px;
@@ -7105,5 +7123,36 @@ background-color: transparent;
 }
 .event-box-design .card .text-container .text-block-two .details {
   margin-left: 25px
+}
+#registration {
+  padding: 40px 0px;
+  overflow: hidden;
+  height: 600px;
+}
+#registration .image-block {
+  max-width: 50%;
+  height: 100%
+} 
+#registration .form-block {
+  background-color: rgb(206, 205, 205);
+  width: 50%;
+  padding: 50px 20px;
+}
+.home-dropdown-one .styledSelect{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+  color: #495057
+}
+.home-dropdown-one .styledSelect::after {
+  top: 60%;
+}
+.home-dropdown-one-btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #07294D;
+  color: #fff;
 }
 /*********events ends here*********/

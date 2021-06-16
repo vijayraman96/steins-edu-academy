@@ -662,4 +662,8 @@ $(function() {
             autoplayHoverPause:true
         });
     })
+    
 })
+$('.datepicker').datepicker({
+    inline: true
+});
