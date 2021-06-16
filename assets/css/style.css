@@ -7127,16 +7127,21 @@ background-color: transparent;
 #registration {
   padding: 40px 0px;
   overflow: hidden;
-  height: 600px;
 }
 #registration .image-block {
   max-width: 50%;
-  height: 100%
+  height: 100%;
+  object-fit: cover;
 } 
+#registration .image-block img {
+  height: 600px;
+  object-fit: cover;
+  width: 100%;
+}
 #registration .form-block {
   background-color: rgb(206, 205, 205);
   width: 50%;
-  padding: 50px 20px;
+  padding: 45px 20px;
 }
 .home-dropdown-one .styledSelect{
   display: flex;
@@ -7154,5 +7159,22 @@ background-color: transparent;
   height: 40px;
   background-color: #07294D;
   color: #fff;
+}
+@media(max-width: 600px) {
+  #registration .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #registration .row .image-block {
+    max-width: 100%;
+  }
+  #registration .row .form-block {
+    width: 100%;
+  }
+  .mb-home-pad {
+    margin-top: 16px;
+  }
 }
 /*********events ends here*********/
