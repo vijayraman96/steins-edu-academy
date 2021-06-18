@@ -23,8 +23,7 @@
     1. COMMON css 
 ===========================*/
 /* @import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swa");
-@import url("https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 body {
   font-family: 'Raleway', sans-serif;
@@ -72,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Gelasio', serif;
+  font-family: 'Raleway', serif;
   font-weight: 700;
   color:#11426a;
   margin: 0px; }
@@ -698,6 +697,11 @@ transition: all 0.3s linear;
 .header-top {
   background: #11426a;
   padding-bottom: 15px; }
+  .header-top-wrapper .header-top-right {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
 
 @media (max-width: 767px) {
   .header-top-wrapper .header-top-left {
@@ -721,7 +725,7 @@ transition: all 0.3s linear;
   .header-top-wrapper .header-top-left {
     width: auto; } }
 .header-top-wrapper .header-top-left .header-meta li a {
-  font-family: 'Source Sans Pro';
+  font-family: 'Raleway';
   font-weight: 400;
   font-size: 16px;
   color: #fff;
@@ -740,7 +744,7 @@ transition: all 0.3s linear;
   .header-top-wrapper .header-top-right {
     width: auto; } }
 .header-top-wrapper .header-top-right .header-link a {
-  font-family: "Source Sans Pro";
+  font-family: "Raleway";
   font-weight: 400;
   font-size: 16px;
   /* color: #8D8D8D; */
@@ -1548,7 +1552,7 @@ transition: all 0.3s linear;
     line-height: 32px;
     color: #fff; }
   .single-courses .courses-title a {
-    font-family: "Source Sans Pro";
+    font-family: "Raleway";
     font-weight: 500;
     font-size: 22px;
     line-height: 32px;
@@ -1720,7 +1724,7 @@ transition: all 0.3s linear;
     line-height: 32px;
     color: #fff; }
   .single-courses-2 .courses-content .courses-title a {
-    font-family: "Source Sans Pro";
+    font-family: "Raleway";
     font-weight: 500;
     font-size: 22px;
     line-height: 32px;
@@ -4080,14 +4084,15 @@ background-color: transparent;
     @media (max-width: 767px) {
       .footer-widget .footer-title {
         font-size: 20px; } }
-.footer-link .footer-icons {
+.footer-link .footer-icons, .footer-icons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 120px;
 }
-.footer-link .footer-icons img {
+
+.footer-link .footer-icons img, .footer-icons img {
   width: 25px;
   height: auto;
 }
@@ -4119,6 +4124,12 @@ background-color: transparent;
       -ms-transition: all 0.3s linear;
       -o-transition: all 0.3s linear;
       transition: all 0.3s linear; }
+      .footer-link .link-list li p a:nth-child(1) {
+        font-family: 'Poppins', sans-serif;
+      }
+      .footer-link .link-list li p a[href="mailto://mail@steinsedu.com"] {
+        font-family: 'Raleway', sans-serif;
+      }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .footer-link .link-list li a {
           font-size: 14px; } }
@@ -7128,30 +7139,72 @@ background-color: transparent;
   padding: 40px 0px;
   overflow: hidden;
 }
+#registration .form-control {
+  height: 50px;
+  border-radius: 0px;
+}
 #registration .image-block {
   max-width: 50%;
   height: 100%;
   object-fit: cover;
+  position: relative;
 } 
+#registration .image-block .text-container {
+  position: absolute;
+  width: 600px;
+  height: 150px;
+  background: linear-gradient(90deg, #2630a8 0%, #0086f8 100%);
+  bottom: 60px;
+  z-index: 10;
+  border-radius: 0px 100px 100px 0px;;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 50px;
+}
+#registration .image-block .text-container h3 {
+    font-weight: 600;
+    color: #fff;
+    font-size: 28px;
+    opacity: 0.9;
+    letter-spacing: -0.025em;
+    line-height: 32px;
+}
+#registration .image-block .text-container p {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+}
 #registration .image-block img {
-  height: 600px;
+  height: 650px;
   object-fit: cover;
   width: 100%;
+  
 }
 #registration .form-block {
-  background-color: rgb(206, 205, 205);
+  background-color: #f2f3f7;
   width: 50%;
   padding: 45px 20px;
+}
+.home-dropdown-one .select{
+  border-bottom: 0px solid transparent;
 }
 .home-dropdown-one .styledSelect{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 10px;
-  color: #495057
+  color: #495057;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid  #999fab;
+  height: 50px;  
+  padding-top: 25px;
+  padding-left: 0px;
 }
 .home-dropdown-one .styledSelect::after {
-  top: 60%;
+  top: 80%;
 }
 .home-dropdown-one-btn {
   display: block;
@@ -7159,6 +7212,19 @@ background-color: transparent;
   height: 40px;
   background-color: #07294D;
   color: #fff;
+  margin-top: 20px;
+}
+#registration .form-control, #registration .custom-file-label {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #999fab;
+  height: 50px;
+  padding-top: 25px;
+  padding-left: 0px;
+}
+#registration .custom-file-label::after {
+  background-color: transparent;
+  top: 18px;
 }
 @media(max-width: 600px) {
   #registration .row {
@@ -7170,6 +7236,17 @@ background-color: transparent;
   #registration .row .image-block {
     max-width: 100%;
   }
+  #registration .image-block .text-container {
+    width: 100%;
+    padding-left: 25px;
+    border-radius: 0px;;
+  } 
+  #registration .image-block .text-container h3 {
+    font-size: 24px;
+  }
+  #registration .image-block .text-container p {
+    font-size: 18px;
+  }
   #registration .row .form-block {
     width: 100%;
   }
@@ -7177,4 +7254,46 @@ background-color: transparent;
     margin-top: 16px;
   }
 }
+@media(min-width: 700px) and (max-width: 1100px) {
+  #registration .image-block img {
+    height: 670px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.header-top-wrapper .header-top-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header-top-wrapper .header-top-left .header-meta li a {
+  margin-left: 20px;
+}
 /*********events ends here*********/
+/******events page start here *********/
+#event-page-one .text-color {
+  color: #1d202c
+}
+#event-page-one .event {
+  background-color:#F1F1F1;
+  margin: 70px 0px 30px;
+}
+#event-page-one .event .col-md-6 {
+  padding: 0px !important}
+#event-page-one .text-container {
+  width: 80%;
+  margin: 0px auto
+}
+#event-page-one .workshop-container {
+  padding-left: 30px !important;
+  width: 550px;
+}
+#event-page-one .workshop-container .main-btn {
+  height: 50px;
+  line-height: 50px;
+}
+.header-top-wrapper .header-top-right .header-link a.notice {
+  font-family: 'Poppins', sans-serif
+}
+/******events page ends here *********/
