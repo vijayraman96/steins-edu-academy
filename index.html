@@ -1310,7 +1310,7 @@
     <!--ONLINE REGISTRATION FORM  STATRS HERE-->
     <section id="registration">
         <div class="fluid-container">
-            <div class="row">
+            <div class="row regis-row">
                 <div class="image-block">
                     <img src="./assets/images/clients.jpg" alt="">
                     <div class="text-container">
@@ -1328,7 +1328,7 @@
                         <p class="pb-2">Fill in the form to register for Online classes for the Academic year 2020.</p>
                     </div>
                     
-                    <form action="" class="p-3">
+                    <form action="sendmail.php" id="contactForm" enctype="multipart/form-data" class="p-3">
                         <div class="row">
                             <div class="col">
                               <input type="text" name="fname" class="form-control mb-home-pad" placeholder="First name" required="required">
@@ -1338,6 +1338,9 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col pt-3">
+                                <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required="required">
+                            </div>
                             <div class="col">
                                 <div class="pt-3 home-dropdown-one">
                                     <select name="select" id="inputState" class="form-control" required="required">
@@ -1346,9 +1349,6 @@
                                       <option >Others</option>
                                     </select>
                                   </div>
-                            </div>
-                            <div class="col pt-3">
-                                <input type="tel" name="phone"  placeholder="Phone" pattern="[0-9]{10}" required="required" class="form-control" >
                             </div>
                         </div>
                         <div class="row pt-3">
@@ -1363,14 +1363,14 @@
                         <div class="row pt-3">
                             <div class="col">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label d-flex" for="inputGroupFile02" required="required">Upload 10th Marksheet</label>
+                                    <input type="file" class="custom-file-input" id="fileOne">
+                                    <label class="custom-file-label d-flex" for="fileOne" required="required">Upload 10th Marksheet</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile03">
-                                    <label class="custom-file-label d-flex mb-home-pad" for="inputGroupFile02" required="required">Upload 12th Marksheet</label>
+                                    <input type="file" class="custom-file-input" id="fileTwo">
+                                    <label class="custom-file-label d-flex mb-home-pad" for="fileTwo" required="required">Upload 12th Marksheet</label>
                                 </div>
                             </div>
                             
@@ -1380,13 +1380,20 @@
                                 <input type="text" class="form-control mb-home-pad" name="address" id="inputAddress" required="required" placeholder="Address for Communication">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control mb-home-pad" name="district" required="required" placeholder="District">
+                                <input type="tel" name="phone"  placeholder="Phone" pattern="[0-9]{10}" required="required" class="form-control" >
                             </div>
+                            
                         </div>
                         <div class="row pt-3">
                             <div class="col">
+                                <input type="text" class="form-control mb-home-pad" name="district" required="required" placeholder="District">
+                            </div>
+                            <div class="col">
                                 <input type="text" class="form-control" name="state" required="required" id="inputAddress" placeholder="State">
                             </div>
+                            
+                        </div>
+                        <div class="row pt-3">
                             <div class="col">
                                 <div class="home-dropdown-one mb-home-pad">
                                     <select name="select"  class="form-control mb-home-pad">
@@ -1398,6 +1405,7 @@
                                   </div>
                             </div>
                         </div>
+
                         <div class="pt-3">
                             <button class="home-dropdown-one-btn" type="submit" class="btn">Submit</button>
                           </div>
@@ -1576,6 +1584,20 @@
     
     <!--====== Main Activation  js ======-->
     <script src="assets/js/main.js"></script>
+    <script >
+        document.querySelector('.custom-file-input').addEventListener('change', function (e) {
+            var name = document.getElementById("fileOne").files[0].name;
+            var nextSibling = e.target.nextElementSibling
+            nextSibling.innerText = name
+        })
+         document.querySelector('.cfi').addEventListener('change', function (e) {
+            var name = document.getElementById("fileTwo").files[0].name;
+            var nextSibling = e.target.nextElementSibling
+            nextSibling.innerText = name
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+    <script src="server.js"></script>
 
     
 </body>
