@@ -1,59 +1,72 @@
+
 <?php
 
-    // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the form fields and remove whitespace.
-        $name = strip_tags(trim($_POST["name"]));
-				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $phone = trim($_POST["phone"]);
-        $subject = trim($_POST["subject"]);
-        $message = trim($_POST["message"]);
+// Class
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
-        // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($subject) OR empty($phone) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Set a 400 (bad request) response code and exit.
-            http_response_code(400);
-            echo "Please complete the form and try again.";
-            exit;
-        }
+// Validate
+if ( isset( $_POST[ 'email' ] ) || array_key_exists( 'email', $_POST ) ) :
 
-        // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "yourmail@gmail.com";
+	// Message Settings
+	$message = array(
+		'fname'			=> $_POST[ 'fname' ],
+		'lname'			=> $_POST[ 'lname' ],
+		'email'		    => $_POST[ 'email' ],
+		'select'		=> $_POST[ 'select' ],
+		'phone'		=> $_POST[ 'phone' ],
+		'father'	=> $_POST[ 'father' ],
+		'mother'	=> $_POST[ 'mother' ],
+		'address'	=> $_POST[ 'address' ],
+		'district'	=> $_POST[ 'district' ],
+		'state'		=> $_POST[ 'state' ],
+		'selectTwo'		=> $_POST[ 'selectTwo' ],
+		'body'			=> '',
+		"alerts"		=> array(
+			"error"			=> 'Message could not be sent.',
+			"success"		=> 'Thank you. Your request has been received. We will get back to you soon',
+		),
+	);
+	
+	$message[ 'body' ] .= '<b>First Name:</b> ' . $message[ 'fname' ];
+	$message[ 'body' ] .= '<b>Last Name:</b> ' . $message[ 'lname' ];
+	$message[ 'body' ] .= '<br><b>Email:</b> ' . $message[ 'email' ];
+	$message[ 'body' ] .= '<br><b>Gender:</b> ' . $message[ 'select' ];
+	$message[ 'body' ] .= '<br><b>Number:</b> ' . $message[ 'phone' ];
+	$message[ 'body' ] .= '<br><b>Father Name</b> ' . $message[ 'father' ];
+	$message[ 'body' ] .= '<br><b>Mother Name</b> ' . $message[ 'mother' ];
+	$message[ 'body' ] .= '<br><b>Address:</b> ' . $message[ 'address' ];
+	$message[ 'body' ] .= '<br><br><b>District:</b><br>' . $message[ 'district' ];
+	$message[ 'body' ] .= '<br><br><b>State:</b><br>' . $message[ 'state' ];
+	
+	// Include
+	require 'phpmailer/Exception.php';
+	require 'phpmailer/PHPMailer.php';
 
-        // Set the email subject.
-        $subject = "$subject";
+	$mail = new PHPMailer( true );
 
-        // Build the email content.
-        $email_content = "First Name: $name\n";
-        $email_content = "Last Name: $phone\n";
-        $email_content .= "Email: $email\n\n";
-        $email_content .= "Subject: $subject\n\n";
-        $email_content .= "Message:\n$message\n";
+	try {
+		// Recipients
+		$mail->AddReplyTo( $message[ 'email' ], $message[ 'name' ] );
+		$mail->setFrom( 'admin@'. $_SERVER['SERVER_NAME'], $message[ 'name' ] );
+		$mail->addAddress( $settings[ 'email' ], $settings[ 'name' ] );
+		
+		// Content
+		$mail->isHTML( true );
+		// $mail->Subject = $message[ 'subject' ];
+		$mail->Body    = $message[ 'body' ];
+		
+		// Send
+		$mail->send();
+		
+		// Success
+		echo '["success", "'. $message[ 'alerts' ][ 'success' ] .'"]';
+	} catch ( Exception $e ) {
+		// Error
+		echo '["error", "'. $message[ 'alerts' ][ 'error' ] .'"]';
+	}
 
-        // Build the email headers.
-        $email_headers = "From: $name <$email>";
-
-        // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
-            echo "Thank You! Your message has been sent.";
-        } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
-        }
-
-    } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
-    }
-
-?>
-
+endif;
 
 
 
