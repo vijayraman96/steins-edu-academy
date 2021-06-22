@@ -131,10 +131,49 @@ p {
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: -1;
 }
-.bg_cover::before {
+.bg_cover::after {
   content: '';
     background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.newsletter-area-3 .bg_cover::after {
+  content: '';
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.newsletter-area-2 {
+  margin-bottom: -300px;
+}
+@media(max-width:600px) {
+  .newsletter-area-2 {
+    margin-bottom: -200px;
+  }
+}
+.newsletter-area-2 .bg_cover::after {
+  content: '';
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.newsletter-area .bg_cover::after {
+  content: '';
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: 0;
     left: 0;
@@ -744,7 +783,7 @@ transition: all 0.3s linear;
   .header-top-wrapper .header-top-right {
     width: auto; } }
 .header-top-wrapper .header-top-right .header-link a {
-  font-family: "Raleway";
+  font-family: "Poppins";
   font-weight: 400;
   font-size: 16px;
   /* color: #8D8D8D; */
@@ -7177,7 +7216,7 @@ background-color: transparent;
   margin-top: 10px;
 }
 #registration .image-block img {
-  height: 650px;
+  height: 720px;
   object-fit: cover;
   width: 100%;
   
@@ -7261,6 +7300,30 @@ background-color: transparent;
     width: 100%;
   }
 }
+@media(min-width: 700px) and (max-width: 900px) {
+  #registration .regis-row {
+    display: flex;
+    flex-direction: column;
+  }
+  #registration .regis-row .image-block {
+    max-width: 100%;;
+  }
+  #registration .regis-row .form-block {
+    width: 100%;
+  }
+}
+@media(min-width: 950px) and (max-width: 1200px) {
+  #registration .regis-row .image-block .text-container {
+    padding-left: 30px;
+    width: 525px;
+    border-radius: 0px;;
+  }
+  #registration .regis-row .image-block img {
+    height: 740px;
+  }
+}
+
+
 .header-top-wrapper .header-top-left {
   display: flex;
   flex-direction: row;
@@ -7269,6 +7332,7 @@ background-color: transparent;
 }
 .header-top-wrapper .header-top-left .header-meta li a {
   margin-left: 20px;
+  font-family: 'poppins', sans-serif;;
 }
 /*********events ends here*********/
 /******events page start here *********/
@@ -7293,7 +7357,7 @@ background-color: transparent;
   height: 50px;
   line-height: 50px;
 }
-.header-top-wrapper .header-top-right .header-link a.notice {
-  font-family: 'Poppins', sans-serif
+.header-top-wrapper .header-top-right .header-link a {
+  font-family: 'Poppins', sans-serif !important
 }
 /******events page ends here *********/
