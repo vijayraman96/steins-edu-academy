@@ -7247,11 +7247,12 @@ background-color: transparent;
 }
 .home-dropdown-one-btn {
   display: block;
-  width: 100%;
+  width: 25%;
   height: 40px;
   background-color: #07294D;
   color: #fff;
   margin-top: 20px;
+  text-align: center;
 }
 #registration .form-control, #registration .custom-file-label {
   background-color: transparent;
